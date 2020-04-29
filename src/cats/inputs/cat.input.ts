@@ -1,11 +1,11 @@
 import { InputType, Field, Int } from '@nestjs/graphql';
 
 @InputType()
-export class UserInput {
+export class CatInput {
   @Field()
-  readonly userName: string;
+  readonly name: string;
   @Field(() => Int)
-  readonly firstName: string;
+  readonly age: number;
   @Field()
-  readonly lastName: string;
+  readonly breed: string;
 }

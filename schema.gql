@@ -1,21 +1,25 @@
-input UserInput {
-  userName: String!
-  firstName: String!
-  lastName: String!
-}
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
 
-type UserType {
+type CatType {
   id: ID!
-  userName: String!
-  firstName: String!
-  lastName: String!
-}
-
-type Mutation {
-  createUser(input: UserInput!): UserType!
+  name: String!
+  age: Int!
+  breed: String!
 }
 
 type Query {
   hello: String!
-  users: [UserType!]!
+  cats: [CatType!]!
+}
+
+type Mutation {
+  createCat(input: CatInput!): CatType!
+}
+
+input CatInput {
+  name: String!
+  age: Int!
+  breed: String!
 }
